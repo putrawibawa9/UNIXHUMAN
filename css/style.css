@@ -1,0 +1,440 @@
+html,
+body {
+    margin: 0px;
+    padding: 0px;
+    font-size: 16px;
+    font-family: 'Roboto', sans-serif;
+    scroll-behavior: smooth;
+}
+
+.wrapper {
+    width: 1024px;
+    margin: auto;
+    padding: 20px 0px 20px 0px;
+}
+
+/*
+* menu
+*/
+
+nav {
+    background-color: #40513B;
+    color: #fff;
+    position: sticky;
+    top: 0%;
+    z-index: 100;
+}
+
+nav>.wrapper {
+    display: flex;
+    justify-content: space-between;
+    font-size: 1.2rem;
+    align-items: center;
+}
+
+.Menu {
+    width: 50%;
+}
+
+.Menu>ul {
+    display: flex;
+    list-style-type: none;
+    margin: 0px;
+    padding: 0px;
+    justify-content: space-between;
+}
+
+.Menu>ul>li>a {
+    text-decoration: none;
+    color: #ffffff;
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+}
+
+.logo>img {
+    height: 60px;
+}
+
+/*
+* Hero / jumbotron
+*/
+
+header {
+    height: 100vh;
+    background-position: center center;
+    position: relative;
+    background: url("../images/nahida.jpg");
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    background-repeat: no-repeat;
+    background-size: cover;
+    letter-spacing: 5px;
+    text-shadow: 0 0 4px #000000;
+}
+
+.header-opacity {
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    background-color: #191c18;
+    top: 0px;
+    left: 0px;
+    opacity: 0.7;
+}
+
+.header-jumbotron {
+    position: absolute;
+    top: 0;
+    left: 0;
+    display: flex;
+    width: 100%;
+    height: 100%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+.header-jumbotron>h4 {
+    font-size: 3rem;
+    color: #fdffa4;
+    margin: 0px;
+    padding: 0px;
+}
+
+.header-jumbotron>h5 {
+    font-size: 1rem;
+    color: #ffffff;
+    margin: 0px;
+    padding: 5px;
+    font-size: 3rem;
+    line-height: 4rem;
+    text-transform: uppercase;
+}
+
+.header-jumbotron>p {
+    color: #ffffff;
+    margin: 0px 5px 20px 5px;
+    padding: 5px;
+}
+
+a {
+    text-decoration: none;
+    color: #333;
+    text-shadow: none;
+}
+
+.button {
+    background-color: #fdffa4;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+.button-xl {
+    font-size: 1.4rem;
+    padding: 20;
+}
+
+#pilihan-item {
+    background-color: #609966;
+    color: #ffffff;
+}
+
+#pilihan-item>.wrapper {
+    padding: 50px 0px 50px 0px;
+}
+
+#pilihan-item>.wrapper>h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#pilihan-item>.wrapper>P {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 50px;
+}
+
+.grid {
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-gap: 40px;
+}
+
+.grid>.item {
+    border: 1px #666;
+    background-color: #9DC08B;
+    border-radius: 5px;
+    position: relative;
+}
+
+.grid>.item>img {
+    width: 70px;
+    position: absolute;
+    top: 2px;
+    right: 5px;
+}
+
+.grid>.item>.item-detail {
+    padding: 30px;
+    font-size: 1.3rem;
+    font-weight: bold;
+    width: 70%;
+}
+
+.grid>.item>.item-detail>div {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-weight: bold;
+}
+
+.grid>.item>.item-detail>div>small {
+    color: #577359;
+    font-size: 1rem;
+    font-style: italic;
+
+}
+
+.grid>.item>.item-detail>div>a {
+    font-size: 1rem;
+    color: #577359;
+}
+
+/*
+* Tentang saya
+*/
+
+#tentang-saya {
+    background-color: #EDF1D6;
+    color: #577359;
+}
+
+#tentang-saya>.wrapper>h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+}
+
+#tentang-saya>.wrapper {
+    padding: 50px 0px 50px 0px;
+}
+
+#tentang-saya>.wrapper>h4 {
+    text-align: center;
+    font-size: 2.8rem;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 50px;
+}
+
+#tentang-saya>.wrapper>P {
+    text-align: center;
+    margin: 0px;
+    padding: 0px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    margin-bottom: 50px;
+}
+
+#tentang-saya>.wrapper>div {
+    display: flex;
+    width: 70%;
+    margin: auto;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+#tentang-saya>.wrapper>div>.foto {
+    width: 30%;
+}
+
+#tentang-saya>.wrapper>div>.foto>img {
+    max-width: 100%;
+}
+
+#tentang-saya>.wrapper>div>.article {
+    width: 70%;
+    padding: 20px;
+    margin: 10px;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+#tentang-saya>.wrapper>div>.article>.social {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+footer {
+    background-color: #40513B;
+    color: #ffffff;
+    text-align: center;
+}
+
+button.hamburger-menu {
+    background: none;
+    border: none;
+    cursor: pointer;
+    display: none;
+}
+
+button.hamburger-menu>i {
+    font-size: 1.5rem;
+    color: #ffffff;
+}
+
+button.hamburger-menu>i.icon-close {
+    display: none;
+}
+
+@media only screen and (max-width: 1024px) {
+    .wrapper {
+        width: 90%;
+    }
+}
+
+@media only screen and (max-width: 900px) {
+    .wrapper {
+        width: 90%;
+    }
+
+    .grid {
+        grid-template-columns: 45% 45%;
+    }
+
+    .item>img {
+        width: 8%;
+    }
+}
+
+@media only screen and (max-width: 768px) {
+    .menu {
+        width: 60%;
+    }
+
+    .header-jumbotron>h4 {
+        font-size: 1.5rem;
+    }
+
+    .header-jumbotron>h5 {
+        font-size: 2rem;
+        line-height: 2.2rem;
+    }
+
+    .header-jumbotron>p {
+        font-size: 0.8rem;
+    }
+
+    .button {
+        padding: 5px;
+    }
+
+    .button-xl {
+        font-size: 1.2rem;
+        padding: 10px;
+    }
+}
+
+@media only screen and (max-width: 600px) {
+    .grid {
+        grid-template-columns: 100%;
+    }
+
+    #tentang-saya>.wrapper>div {
+        width: 100%;
+        flex-direction: column;
+    }
+
+    #tentang-saya>.wrapper>div>.foto {
+        width: 50%;
+    }
+
+    #tentang-saya>.wrapper>div>.foto>img {
+        max-width: 100%;
+    }
+
+    #tentang-saya>.wrapper>div>.article {
+        width: 70%;
+        padding: 20px;
+        margin: 10px;
+        background-color: #ffffff;
+        border-radius: 10px;
+    }
+
+    button.hamburger-menu {
+        display: inline;
+    }
+
+    .Menu {
+        display: none;
+    }
+
+    .tampil {
+        display: inline;
+    }
+
+    .tampil>ul {
+        flex-direction: column;
+        background-color: #719161;
+        width: 100%;
+        position: fixed;
+        top: 85px;
+        left: 0px;
+    }
+
+    .tampil>ul>li {
+        color: #ffffff;
+        padding: 10px 20px 10px 20px;
+        display: block;
+        border-bottom: 1px solid #ffffff;
+    }
+}
+
+.button {
+    background-color: #fdffa4;
+    padding: 5px 10px 5px 10px;
+    border-radius: 5px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    transition: background-color 0.3s ease;
+}
+
+.button:hover {
+    background-color: #e0e0e0;
+}
+
+.button-xl {
+    font-size: 1.4rem;
+    padding: 20;
+}
+
+.Menu>ul>li>a:hover,
+.tampil>ul>li:hover {
+    background-color: #719161;
+}
+
+.Menu>ul>li>a:hover,
+#pilihan-item>h4:hover,
+#tentang-saya>h4:hover {
+    color: #fdffa4;
+}
+
+button.hamburger-menu:hover {
+    background-color: #719161;
+}
+
+button.hamburger-menu:hover>i {
+    color: #fdffa4;
+}
