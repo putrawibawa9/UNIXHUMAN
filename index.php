@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indirart Cosplay</title>
+    <title>Rahindra Cosplay</title>
     <link rel="icon type=image/x-icon" href="logo2.png">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -56,8 +56,8 @@
         <section id="home">
             <div class="header-opacity"></div>
             <div class="header-jumbotron">
-                <h4>Indirart Cosplay</h4>
-                <h5>Sewa Pakaian Cosplay<br /> NAHIDA </h5>
+                <h4>Rahindra Cosplay</h4>
+                <h5>Sewa Pakaian Cosplay<br /> RAHINDRA </h5>
                 <p>wig, aksesoris, pakaian</p>
                 <a href="#pilihan-item" class="button button-xl">PESAN SEKARANG</a>
             </div>
@@ -97,12 +97,8 @@
 
                 <div class="article">
                     <article>
-                        <h2>Saya Indira Artha,</h2>
+                        <h2>Ida Ayu Rahindra Prabawati Sari,</h2>
                         <p>orang yang ingin berbagi kebahagiaan dengan menyewakan pakaian cosplay hehehe. jika ingin bertanya-tanya tentang pemesanan bisa chat melalui dm ya</p>
-                        <div class="social">
-                            <a href="https://www.instagram.com/indiraartha_"><i class="fa-brands fa-instagram"></i></a>
-                            <a href="https://twitter.com/Unixhuman_"><i class="fa-brands fa-twitter"></i></a>
-                        </div>
                     </article>
                 </div>
             </div>

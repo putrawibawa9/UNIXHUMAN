@@ -26,6 +26,39 @@
             color: #ffffff;
             text-align: center;
          }
+
+         .upload-container {
+        max-width: 400px;
+        margin: 50px auto;
+        padding: 20px;
+        background-color: #f9f9f9;
+        border: 1px solid #ccc;
+        border-radius: 8px;
+    }
+    
+    .upload-container label {
+        display: block;
+        font-size: 16px;
+        margin-bottom: 10px;
+    }
+    
+    .upload-container input[type="file"] {
+        margin-bottom: 10px;
+    }
+    
+    .upload-container a.button {
+        display: inline-block;
+        padding: 10px 20px;
+        background-color: #007bff;
+        color: #fff;
+        text-decoration: none;
+        border-radius: 5px;
+    }
+    
+    .upload-container a.button:hover {
+        background-color: #0056b3;
+    }
+         
     </style>
 </head>
 <body>
@@ -61,7 +94,15 @@
 
     </nav>
     <h1>TERIMA KASIH SUDAH MENYEWA</h1>
-    <a href="index.php">Kembali ke home</a>
+    <a href="index.php">Kembali ke home</a> <br>
+
+  <div class="upload-container">
+    <label for="fileUpload">Silahkan upload bukti pembayaran disini</label>
+    <input type="file" id="fileUpload" name="fileUpload">
+    <br>
+    <a href="index.php" class="button">Upload</a>
+</div>
+
     <footer>
         <div class="wrapper">arigatou gozaimasu !!</div>
     </footer>

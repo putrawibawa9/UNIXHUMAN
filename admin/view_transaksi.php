@@ -25,13 +25,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Travel Agent</title>
+    <title>Rahindra Cosplay</title>
 <link rel="stylesheet" href="../css/dashboardview.css">
 </head>
 <body>
    
     <header>
-    <h1>Indirart Cosplay</h1>
+    <h1>Rahindra Cosplay</h1>
         <p>Sewa Pakaian Cosplay NAHIDA </p>
     </header>
  

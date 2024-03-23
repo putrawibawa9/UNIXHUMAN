@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indirart Cosplay | Pesan</title>
+    <title>Rahindra Cosplay | Pesan</title>
     <link rel="icon type=image/x-icon" href="logo2.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pesan.css">
@@ -123,9 +123,9 @@
             </div>
         </form>
     </div>
-    <footer>
+    <!-- <footer>
         <div class="wrapper">arigatou gozaimasu !!</div>
-    </footer>
+    </footer> -->
     <script src="js/pesanan.js"></script>
 </body>
 

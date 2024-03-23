@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Indirart Cosplay | Dashboard</title>
+    <title>Rahindra Cosplay | Dashboard</title>
     <link rel="icon type=image/x-icon" href="logo2.png">
     <link rel="stylesheet" href="../css/dashboardAdmin.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -46,7 +46,7 @@
 <body>
 
 <header>
-        <h1 style="color: white;">INDIRART COSPLAY</h1>
+        <h1 style="color: white;">RAHINDRA COSPLAY</h1>
         <p>Sewa pakian cosplay nahida</p>
         <h1 style="color: white;">DAFTAR SEWA</h1>
     </header>
