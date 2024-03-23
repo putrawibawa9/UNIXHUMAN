@@ -1,11 +1,11 @@
 -- phpMyAdmin SQL Dump
--- version 5.1.1
+-- version 5.2.1
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Jan 14, 2024 at 01:07 PM
--- Server version: 10.4.22-MariaDB
--- PHP Version: 8.1.1
+-- Generation Time: Mar 23, 2024 at 12:24 PM
+-- Server version: 10.4.32-MariaDB
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -18,7 +18,7 @@ SET time_zone = "+00:00";
 /*!40101 SET NAMES utf8mb4 */;
 
 --
--- Database: `indirart_cosplay`
+-- Database: `db_human`
 --
 
 -- --------------------------------------------------------
@@ -35,7 +35,7 @@ CREATE TABLE `admin` (
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `tgl_input` date NOT NULL DEFAULT current_timestamp(),
   `tgl_update` date DEFAULT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `admin`
@@ -61,16 +61,16 @@ CREATE TABLE `barang` (
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `tgl_input` date NOT NULL DEFAULT current_timestamp(),
   `tgl_update` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `barang`
 --
 
 INSERT INTO `barang` (`id_barang`, `nama_barang`, `gambar_barang`, `jenis_barang`, `ukuran_barang`, `stok_barang`, `harga_barang`, `status`, `tgl_input`, `tgl_update`) VALUES
-(1, 'Kostum nahida', 'baju.png', 'Kostum', 'M,L', 4, 200000, 1, '2024-01-14', '2024-01-14'),
-(2, 'Wig nahida', 'wig.png', 'Wig', 'M,XL', 0, 50000, 1, '2024-01-14', '2024-01-14'),
-(3, 'aksesoris nahida', 'aksesoris.png', 'Sepatu', 'XL', 6, 150000, 1, '2024-01-14', '2024-01-14');
+(1, 'Kostum nahida', 'baju.png', 'Kostum', 'M,L', 998, 200000, 1, '2024-01-14', '2024-01-14'),
+(2, 'Wig nahida', 'wig.png', 'Wig', 'M,XL', 898, 50000, 1, '2024-01-14', '2024-01-14'),
+(3, 'aksesoris nahida', 'aksesoris.png', 'Sepatu', 'XL', 897, 150000, 1, '2024-01-14', '2024-01-14');
 
 -- --------------------------------------------------------
 
@@ -88,7 +88,7 @@ CREATE TABLE `pelanggan` (
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `tgl_input` date NOT NULL DEFAULT current_timestamp(),
   `tgl_update` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `pelanggan`
@@ -121,18 +121,16 @@ CREATE TABLE `transaksi` (
   `status` tinyint(1) NOT NULL DEFAULT 1,
   `tgl_input` date NOT NULL DEFAULT current_timestamp(),
   `tgl_update` date NOT NULL DEFAULT current_timestamp()
-) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4;
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
 
 --
 -- Dumping data for table `transaksi`
 --
 
 INSERT INTO `transaksi` (`id_transaksi`, `id_pelanggan`, `id_barang`, `ukuran_barang`, `jumlah_barang`, `harga_barang`, `total_harga`, `tanggal_sewa`, `tanggal_kembali`, `status_sewa`, `status`, `tgl_input`, `tgl_update`) VALUES
-(11, 1, 1, 'L', 1, 200000, 200000, '2024-01-14', '2024-01-24', 0, 1, '2024-01-14', '2024-01-14'),
-(11, 2, 1, 'L', 1, 200000, 200000, '2024-01-14', '2024-01-24', 0, 1, '2024-01-14', '2024-01-14'),
-(11, 3, 1, 'L', 1, 200000, 200000, '2024-01-14', '2024-01-24', 0, 1, '2024-01-14', '2024-01-14'),
-(11, 4, 1, 'L', 1, 200000, 200000, '2024-01-14', '2024-01-24', 0, 1, '2024-01-14', '2024-01-14'),
-(11, 5, 1, 'L', 1, 200000, 200000, '2024-01-14', '2024-01-24', 0, 1, '2024-01-14', '2024-01-14');
+(1, 1, 1, 'L', 2, 200000, 400000, '2024-03-23', '2024-03-31', 0, 1, '2024-03-23', '2024-03-23'),
+(2, 1, 2, 'XL', 2, 50000, 100000, '2024-03-23', '2024-03-29', 0, 1, '2024-03-23', '2024-03-23'),
+(3, 1, 3, 'XL', 3, 150000, 450000, '2024-03-23', '2024-03-31', 0, 1, '2024-03-23', '2024-03-23');
 
 --
 -- Indexes for dumped tables
@@ -161,48 +159,17 @@ ALTER TABLE `pelanggan`
 -- Indexes for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  ADD PRIMARY KEY (`id_transaksi`),
-  ADD KEY `id_pelanggan` (`id_pelanggan`),
-  ADD KEY `id_barang` (`id_barang`);
+  ADD PRIMARY KEY (`id_transaksi`);
 
 --
 -- AUTO_INCREMENT for dumped tables
 --
 
 --
--- AUTO_INCREMENT for table `admin`
---
-ALTER TABLE `admin`
-  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
--- AUTO_INCREMENT for table `barang`
---
-ALTER TABLE `barang`
-  MODIFY `id_barang` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
-
---
--- AUTO_INCREMENT for table `pelanggan`
---
-ALTER TABLE `pelanggan`
-  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
-
---
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=12;
-
---
--- Constraints for dumped tables
---
-
---
--- Constraints for table `transaksi`
---
-ALTER TABLE `transaksi`
-  ADD CONSTRAINT `id_barang` FOREIGN KEY (`id_barang`) REFERENCES `barang` (`id_barang`),
-  ADD CONSTRAINT `id_pelanggan` FOREIGN KEY (`id_pelanggan`) REFERENCES `pelanggan` (`id_pelanggan`);
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
