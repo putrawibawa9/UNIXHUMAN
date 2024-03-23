@@ -10,7 +10,7 @@
     <link rel="stylesheet" href="css/login.css">
     <?php
     require 'app/Auth.php';
-    $auth   = new Auth();
+    $auth   = new Authentication\Auth();
     if (isset($_POST['login'])) {
         $email  = $_POST['email'];
         $pass   = $_POST['password'];

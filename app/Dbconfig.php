@@ -1,4 +1,6 @@
 <?php
+namespace DB{
+
 
 class Database
 {
@@ -13,4 +15,5 @@ class Database
     {
         return $this->db = mysqli_connect($this->host, $this->username, $this->pass, $this->db_name);
     }
+}
 }

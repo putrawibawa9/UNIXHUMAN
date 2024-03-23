@@ -1,6 +1,9 @@
 <?php
 
-require_once 'Dbconfig.php';
+
+namespace Authentication{
+    use DB\Database;
+    require_once 'Dbconfig.php';
 
 class Auth extends Database
 {
@@ -62,4 +65,5 @@ class Auth extends Database
         header('Location: index.php');
         exit();
     }
+}
 }

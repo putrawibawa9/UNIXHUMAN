@@ -3,7 +3,7 @@
 require_once 'Dbconfig.php';
 require_once 'Item.php';
 
-class Transaksi extends Database
+class Transaksi extends DB\Database
 {
     function __construct()
     {

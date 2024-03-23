@@ -1,5 +1,5 @@
 <?php
-
+use DB\Database;
 require_once 'Dbconfig.php';
 
 class Item extends Database
