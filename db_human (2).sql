@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Mar 23, 2024 at 12:24 PM
+-- Generation Time: Mar 24, 2024 at 08:34 AM
 -- Server version: 10.4.32-MariaDB
 -- PHP Version: 8.2.12
 
@@ -42,7 +42,8 @@ CREATE TABLE `admin` (
 --
 
 INSERT INTO `admin` (`id_admin`, `nama_admin`, `username`, `password`, `status`, `tgl_input`, `tgl_update`) VALUES
-(1, 'si admin', 'admin', 'admin123', 1, '2024-01-14', NULL);
+(1, 'putra', 'putrawibawa9', '123', 1, '0000-00-00', '0000-00-00'),
+(2, 'win', 'win', '123', 1, '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -68,9 +69,9 @@ CREATE TABLE `barang` (
 --
 
 INSERT INTO `barang` (`id_barang`, `nama_barang`, `gambar_barang`, `jenis_barang`, `ukuran_barang`, `stok_barang`, `harga_barang`, `status`, `tgl_input`, `tgl_update`) VALUES
-(1, 'Kostum nahida', 'baju.png', 'Kostum', 'M,L', 998, 200000, 1, '2024-01-14', '2024-01-14'),
-(2, 'Wig nahida', 'wig.png', 'Wig', 'M,XL', 898, 50000, 1, '2024-01-14', '2024-01-14'),
-(3, 'aksesoris nahida', 'aksesoris.png', 'Sepatu', 'XL', 897, 150000, 1, '2024-01-14', '2024-01-14');
+(1, 'Kostum nahida', 'baju.png', 'Kostum', 'M,L', 992, 200000, 1, '2024-01-14', '2024-01-14'),
+(2, 'Wig nahida', 'wig.png', 'Wig', 'M,XL', 896, 50000, 1, '2024-01-14', '2024-01-14'),
+(3, 'aksesoris nahida', 'aksesoris.png', 'Sepatu', 'XL', 896, 150000, 1, '2024-01-14', '2024-01-14');
 
 -- --------------------------------------------------------
 
@@ -95,11 +96,11 @@ CREATE TABLE `pelanggan` (
 --
 
 INSERT INTO `pelanggan` (`id_pelanggan`, `nama_pelanggan`, `no_telepon`, `email_pelanggan`, `password`, `alamat_pelanggan`, `status`, `tgl_input`, `tgl_update`) VALUES
-(1, 'Noya', '0895329736711', 'Noya@gmail.com', 'Noya', 'Jl. Tukad Badung', 1, '2024-01-14', '2024-01-14'),
-(2, 'Shoyo', '08973497235', 'Shoyo@gmail.com', 'Shoyo', 'Jl. Renon', 2, '2024-01-14', '2024-01-14'),
-(3, 'Asta', '08204589342', 'Asta@gmail.com', 'Asta', 'Jl. Sanur', 3, '2024-01-14', '2024-01-14'),
-(4, 'Tanjiro', '08174839612', 'Tanjiro@gmail.com', 'Tanjiro', 'Jl. Teuku Umar', 4, '2024-01-14', '2024-01-14'),
-(5, 'Yuji', '08185638024', 'Yuji@gmail.com', 'Yuji', 'Jl. Wr. Supratman', 5, '2024-01-14', '2024-01-14');
+(1, 'putra', '08956233758', 'putrawibawa7@gmail.com', '123', 'Denpasar', 0, '0000-00-00', '0000-00-00'),
+(2, 'win', '08956233758', 'Win@gmail.com', '123', 'Denpasar', 0, '0000-00-00', '0000-00-00'),
+(3, 'dewd', '08956233758', 'dedeadi@gmail.com', '123', 'Denpasar', 0, '0000-00-00', '0000-00-00'),
+(4, 'arjana', '08956233758343', 'arkana@gmail.com', '12345678', 'Denpasar', 0, '0000-00-00', '0000-00-00'),
+(5, 'julianti', '0895623318043', 'julianti@gmail.com', '123', 'Guwang', 23, '0000-00-00', '0000-00-00');
 
 -- --------------------------------------------------------
 
@@ -130,7 +131,13 @@ CREATE TABLE `transaksi` (
 INSERT INTO `transaksi` (`id_transaksi`, `id_pelanggan`, `id_barang`, `ukuran_barang`, `jumlah_barang`, `harga_barang`, `total_harga`, `tanggal_sewa`, `tanggal_kembali`, `status_sewa`, `status`, `tgl_input`, `tgl_update`) VALUES
 (1, 1, 1, 'L', 2, 200000, 400000, '2024-03-23', '2024-03-31', 0, 1, '2024-03-23', '2024-03-23'),
 (2, 1, 2, 'XL', 2, 50000, 100000, '2024-03-23', '2024-03-29', 0, 1, '2024-03-23', '2024-03-23'),
-(3, 1, 3, 'XL', 3, 150000, 450000, '2024-03-23', '2024-03-31', 0, 1, '2024-03-23', '2024-03-23');
+(3, 1, 3, 'XL', 3, 150000, 450000, '2024-03-23', '2024-03-31', 0, 1, '2024-03-23', '2024-03-23'),
+(4, 1, 1, 'L', 4, 200000, 800000, '2024-03-23', '2024-03-29', 0, 1, '2024-03-23', '2024-03-23'),
+(5, 1, 1, 'L', 1, 200000, 200000, '2024-03-23', '2024-03-28', 0, 1, '2024-03-23', '2024-03-23'),
+(6, 1, 2, 'Pilih', 1, 50000, 50000, '2024-03-23', '2024-03-30', 0, 1, '2024-03-23', '2024-03-23'),
+(7, 1, 2, 'Pilih', 1, 50000, 50000, '2024-03-23', '2024-03-28', 0, 1, '2024-03-23', '2024-03-23'),
+(8, 1, 3, 'Pilih', 1, 150000, 150000, '2024-03-23', '2024-03-30', 0, 1, '2024-03-23', '2024-03-23'),
+(9, 0, 1, 'L', 1, 200000, 200000, '2024-03-23', '2024-03-31', 0, 1, '2024-03-23', '2024-03-23');
 
 --
 -- Indexes for dumped tables
@@ -166,10 +173,22 @@ ALTER TABLE `transaksi`
 --
 
 --
+-- AUTO_INCREMENT for table `admin`
+--
+ALTER TABLE `admin`
+  MODIFY `id_admin` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
+
+--
+-- AUTO_INCREMENT for table `pelanggan`
+--
+ALTER TABLE `pelanggan`
+  MODIFY `id_pelanggan` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=6;
+
+--
 -- AUTO_INCREMENT for table `transaksi`
 --
 ALTER TABLE `transaksi`
-  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=4;
+  MODIFY `id_transaksi` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=10;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
