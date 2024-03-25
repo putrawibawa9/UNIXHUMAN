@@ -124,6 +124,9 @@ a {
     <div class="center-container">
     <a href="tambah_produk.php">Tambah Produk</a>
     </div>
+    <div class="center-container">
+    <a href="../index.php">Logout</a>
+    </div>
 
 </body>
 

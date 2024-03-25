@@ -113,6 +113,9 @@ a {
     <div class="center-container">
         <a href="dashboardProduct.php">Dashboard Produk</a>
     </div>
+    <div class="center-container">
+    <a href="../index.php">Logout</a>
+    </div>
 
 </body>
 

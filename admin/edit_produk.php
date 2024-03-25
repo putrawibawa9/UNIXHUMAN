@@ -12,27 +12,31 @@ $barang2 = new Produk;
 $pdk =  $barang2->viewEachProduct($id_barang);
 
 if(isset($_POST['submit'])){
-
-
+    
+    $edit = new Produk;
+    $result = $edit->editProduk($_POST);
     
     //check the progress
-    if (ubahProduk($_POST)>0){
+    if ($result){
         echo "
             <script>
             alert('data berhasil diubah');
-            document.location.href = 'home.php';
+            document.location.href = 'dashboardProduct.php';
             </script>
         ";
     }else{
         echo " <script>
         alert('data gagal diubah');
-        document.location.href = 'home.php';
+        document.location.href = 'dashboardProduct.php';
         </script>
     ";
 
     }
 
-}
+
+    }
+
+
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -114,7 +118,7 @@ if(isset($_POST['submit'])){
 <form action="" method="post" enctype="multipart/form-data">
 <input type="hidden" name="id_barang" value="<?= $pdk['id_barang']?>">
 <input type="hidden" name="status" value="<?= $pdk['status']?>">
-<input type="hidden" name="gambar_barang" value="<?= $pdk['gambar_barang']?>">
+<input type="hidden" name="gambar_lama" value="<?= $pdk['gambar_barang']?>">
 <ul>
     <li>
         <label for="Nama_produk">Nama Produk :</label>

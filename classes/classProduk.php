@@ -104,31 +104,49 @@ class Produk extends Connect{
 
     public function editProduk($data){
         $conn = $this->getConnection();
-        $nama_produk = $data['nama_produk'];
-        $keterangan_produk = $data['keterangan_produk'];
-        $id_produk = $data['id_produk'];
-        $gambarLama = $data['gambarLama'];
-        $id_kategori = $data['id_kategori'];
+        $id_barang = $data['id_barang'];
+        $nama_barang = $data['nama_barang'];
+        $jenis_barang = $data['jenis_barang'];
+        $ukuran_barang = $data['ukuran_barang'];
+        $gambar_barang = $data['gambar_barang'];
+        $gambar_lama = $data['gambar_lama'];
+        $ukuran_barang = $data['ukuran_barang'];
+        $stok_barang = $data['stok_barang'];
+        $harga_barang = $data['harga_barang'];
+        $status = $data['status'];
+        $tgl_input = $data['tgl_input'];
+        $tgl_update = $data['tgl_update'];
+        $harga_barang = $data['harga_barang'];
 
           //check whether user pick a new image or not
-        if($_FILES['gambar']['error']===4){
-            $gambar = $gambarLama;
+        if($_FILES['gambar_barang']['error']===4){
+            $gambar_barang = $gambar_lama;
         }else{
-            $gambar = $this->uploadGambar();
+            $gambar_barang = $this->uploadGambar();
         }
-        $query = "UPDATE produk SET
-        nama_produk = ?,
-        keterangan_produk = ?,
-        gambar = ?,
-        id_kategori = ?
-        WHERE id_produk = ?
+        $query = "UPDATE barang SET
+        nama_barang = ?,
+        gambar_barang = ?,
+        jenis_barang = ?,
+        ukuran_barang = ?,
+        stok_barang = ?,
+        harga_barang = ?,
+        status = ?,
+        tgl_input = ?,
+        tgl_update = ?
+        WHERE id_barang = ?
         ";
              $stmt = $conn->prepare($query);
-                $stmt->bindParam(1,$nama_produk);
-                $stmt->bindParam(2,$keterangan_produk);
-                $stmt->bindParam(3,$gambar);
-                $stmt->bindParam(4,$id_kategori);
-                $stmt->bindParam(5,$id_produk);
+                $stmt->bindParam(1,$nama_barang);
+                $stmt->bindParam(2,$gambar_barang);
+                $stmt->bindParam(3,$jenis_barang);
+                $stmt->bindParam(4,$ukuran_barang);
+                $stmt->bindParam(5,$stok_barang);
+                $stmt->bindParam(6,$harga_barang);
+                $stmt->bindParam(7,$status);
+                $stmt->bindParam(8,$tgl_input);
+                $stmt->bindParam(9,$tgl_update);
+                $stmt->bindParam(10,$id_barang);
                 $stmt->execute();
                 return true;
     }
