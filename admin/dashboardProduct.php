@@ -73,19 +73,23 @@ a {
         <thead>
             <tr>
                 <th>NO</th>
-                <th>TGL TRANSAKSI</th>
-                <th>BARANG</th>
-                <th>JUMLAH</th>
-                <th>TGL SEWA</th>
-                <th>TGL KEMBALI</th>
-                <th>STATUS</th>
-                <th>VIEW</th>
+                <th>Nama Barang</th>
+                <th>Gambar Barang</th>
+                <th>Jenis Barang</th>
+                <th>Ukuran Barang</th>
+                <th>Stok Barang</th>
+                <th>Harga Barang</th>
+                <th>Status</th>
+                <th>Tanggal Input</th>
+                <th>Tanggal Update</th>
+                <th>Edit</th>
+                <th>Delete</th>
             </tr>
         </thead>
         <tbody>
 
             <?php
-            $data_trans = $trans->getAll();
+            $data_trans = $trans->getAllProduct();
 
      
             if ($data_trans) {
@@ -94,13 +98,17 @@ a {
                     $no++;
                     echo '<tr>
                         <td>' . $no . '</td>
-                        <td>' . $data['tgl_input'] . '</td>
                         <td>' . $data['nama_barang'] . '</td>
-                        <td>' . $data['jumlah_barang'] . '</td>
-                        <td>' . $data['tanggal_sewa'] . '</td>
-                        <td>' . $data['tanggal_kembali'] . '</td>
-                        <td>' . ($data['status_sewa'] ? 'Finished' : 'Ongoing') . '</td>
-                        <td><a href="view_transaksi.php?id='.$data['id_transaksi']. '">View</a></td>
+                        <td>' . $data['gambar_barang'] . '</td>
+                        <td>' . $data['jenis_barang'] . '</td>
+                        <td>' . $data['ukuran_barang'] . '</td>
+                        <td>' . $data['stok_barang'] . '</td>
+                        <td>' . $data['harga_barang'] . '</td>
+                        <td>' . $data['status'] . '</td>
+                        <td>' . $data['tgl_input'] . '</td>
+                        <td>' . $data['tgl_update'] . '</td>
+                        <td><a href="edit_produk.php?id_barang='.$data['id_barang']. '">Edit</a></td>
+                        <td><a href="delete_produk.php?id_barang='.$data['id_barang']. '" onclick="return confirm("yakin?")">Delete</a></td>
                     </tr>';
                 }
             } else {
@@ -111,7 +119,10 @@ a {
     </table>
 
     <div class="center-container">
-        <a href="dashboardProduct.php">Dashboard Produk</a>
+        <a href="dashboard.php">Dashboard Transaksi</a>
+    </div>
+    <div class="center-container">
+    <a href="tambah_produk.php">Tambah Produk</a>
     </div>
 
 </body>

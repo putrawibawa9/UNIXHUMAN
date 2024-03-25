@@ -43,13 +43,24 @@ function regristrasiPelanggan($data){
             </script>";
             return false;
     }
-  
-    //enkripsi passrod
-    // $password = password_hash($password, PASSWORD_DEFAULT);
-  
-    //tambah user baru ke database
-    mysqli_query($conn,"INSERT INTO pelanggan VALUES('','$nama_pelanggan','$no_telepon','$email_pelanggan','$password', '$alamat_pelanggan','$status','','')");
-    return mysqli_affected_rows($conn);
+
+    try {
+      mysqli_query($conn,"INSERT INTO pelanggan VALUES('','$nama_pelanggan','$no_telepon','$email_pelanggan','$password', '$alamat_pelanggan','$status','','')");
+      return mysqli_affected_rows($conn);
+  } catch (mysqli_sql_exception $e) {
+      // Catching the mysqli_sql_exception specifically
+      // You can handle the exception here
+      if ($e->getCode() == 1062) {
+          // This error code (1062) corresponds to a duplicate entry error
+          // Handle the duplicate entry error here
+          echo "Duplicate entry detected. Please handle accordingly.";
+      } else {
+          // Handle other MySQLi exceptions
+          echo "An error occurred: " . $e->getMessage();
+      }
+  }
+
+
   }
   
 

@@ -22,6 +22,15 @@ class Transaksi extends DB\Database
         }
         return $transaksi ?? '';
     }
+    function getAllProduct()
+    {
+        $sql = "SELECT * FROM barang";
+        $query = mysqli_query($this->db, $sql);
+        while ($data = mysqli_fetch_array($query)) {
+            $transaksi[] = $data;
+        }
+        return $transaksi ?? '';
+    }
 
     function setData()
     {
