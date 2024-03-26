@@ -18,7 +18,7 @@ if(isset($_POST['submit'])){
     }else{
         echo " <script>
         alert('data gagal ditambah');
-        document.location.href = 'dashboardProduct.php';
+        document.location.href = 'tambah_produk.php';
         </script>
     ";
 

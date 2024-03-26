@@ -37,6 +37,7 @@ if(isset($_POST['register'])){
         </div>
         <div class="card-body">
             <form action="" method="post">
+                <input type="hidden" name="status" value="1">
                 <div class="mb-3">
                     <input type="text" name="nama_pelanggan" placeholder="Nama Pelanggan">
                 </div>
@@ -51,9 +52,6 @@ if(isset($_POST['register'])){
                 </div>
                 <div class="mb-3">
                     <input type="text" name="alamat_pelanggan" placeholder="Alamat Pelanggan">
-                </div>
-                <div class="mb-3">
-                    <input type="text" name="status" placeholder="Status">
                 </div>
                 <div class="mb-3">
                     <input type="password" name="password2" placeholder="Confirm Password">

@@ -27,7 +27,7 @@ if(isset($_POST['submit'])){
     }else{
         echo " <script>
         alert('data gagal diubah');
-        document.location.href = 'dashboardProduct.php';
+        document.location.href = 'edit_produk.php';
         </script>
     ";
 
@@ -126,7 +126,7 @@ if(isset($_POST['submit'])){
     </li>
     <li>
         <label for="Foto_produk">Foto Produk :</label>
-        <input type="file" name="gambar_barang" id="nama">
+        <input type="file" name="gambar_barang" id="nama" required>
 
         <img src="../<?= $pdk['gambar_barang'] ?>" width="100px" height="100px">
     </li>
