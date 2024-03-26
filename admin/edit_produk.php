@@ -118,6 +118,8 @@ if(isset($_POST['submit'])){
 <form action="" method="post" enctype="multipart/form-data">
 <input type="hidden" name="id_barang" value="<?= $pdk['id_barang']?>">
 <input type="hidden" name="status" value="<?= $pdk['status']?>">
+<input type="hidden" name="tgl_input" value="<?= $pdk['tgl_input']?>">
+<input type="hidden" name="tgl_update" value="<?php echo date('Y-m-d'); ?>">
 <input type="hidden" name="gambar_lama" value="<?= $pdk['gambar_barang']?>">
 <ul>
     <li>
@@ -149,17 +151,6 @@ if(isset($_POST['submit'])){
         <label for="Nama_produk">Harga Produk :</label>
         <input type="number" name="harga_barang" id="Nama_produk" required value="<?= $pdk['harga_barang']; ?>">
     </li>
-    <li>
-        <label for="Nama_produk">Tanggal Input Produk :</label>
-        <input type="date" name="tgl_input" id="Nama_produk" required value="<?= $pdk['tgl_input']; ?>">
-    </li>
-    <li>
-        <label for="Nama_produk">Tanggal Update Produk :</label>
-        <input type="date" name="tgl_update" id="Nama_produk" required value="<?= $pdk['tgl_update']; ?>">
-    </li>
-
-
-
     <button type="submit" name="submit">Post</button>
 </ul>
 

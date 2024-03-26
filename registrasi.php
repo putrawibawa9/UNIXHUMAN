@@ -7,7 +7,7 @@ if(isset($_POST['register'])){
     if (regristrasiPelanggan($_POST) > 0) {
         echo "<script>
                 alert('User baru berhasil ditambahkan');
-                document.location.href = 'index.php';
+                document.location.href = 'login.php';
               </script>";
            
     } else {
@@ -39,22 +39,22 @@ if(isset($_POST['register'])){
             <form action="" method="post">
                 <input type="hidden" name="status" value="1">
                 <div class="mb-3">
-                    <input type="text" name="nama_pelanggan" placeholder="Nama Pelanggan">
+                    <input type="text" name="nama_pelanggan" placeholder="Nama Pelanggan" required>
                 </div>
                 <div class="mb-3">
-                    <input type="text" name="no_telepon" placeholder="No Telepon">
+                    <input type="text" name="no_telepon" placeholder="No Telepon" required>
                 </div>
                 <div class="mb-3">
-                    <input type="text" name="email_pelanggan" placeholder="Email Pelanggan">
+                    <input type="email" name="email_pelanggan" placeholder="Email Pelanggan" required>
                 </div>
                 <div class="mb-3">
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
                 <div class="mb-3">
-                    <input type="text" name="alamat_pelanggan" placeholder="Alamat Pelanggan">
+                    <input type="text" name="alamat_pelanggan" placeholder="Alamat Pelanggan" required>
                 </div>
                 <div class="mb-3">
-                    <input type="password" name="password2" placeholder="Confirm Password">
+                    <input type="password" name="password2" placeholder="Confirm Password" required>
                 </div>
                 <div class="d-grid gap-2">
                     <button type="login" name="register">Register</button>

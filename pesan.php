@@ -123,9 +123,8 @@
             </div>
         </form>
     </div>
-    <!-- <footer>
-        <div class="wrapper">arigatou gozaimasu !!</div>
-    </footer> -->
+
+    
     <script src="js/pesanan.js"></script>
 </body>
 

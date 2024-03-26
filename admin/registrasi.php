@@ -37,19 +37,19 @@ if(isset($_POST['register'])){
         <div class="card-body">
             <form action="" method="post">
                 <div class="mb-3">
-                    <input type="text" name="nama_admin" placeholder="Nama Admin">
+                    <input type="text" name="nama_admin" placeholder="Nama Admin" required>
                 </div>
                 <div class="mb-3">
-                    <input type="text" name="username" placeholder="Username">
+                    <input type="text" name="username" placeholder="Username" required>
                 </div>
                 <div class="mb-3">
-                    <input type="password" name="password" placeholder="Password">
+                    <input type="password" name="password" placeholder="Password" required>
                 </div>
                 <div class="mb-3">
-                    <input type="text" name="status" placeholder="Status">
+                    <input type="text" name="status" placeholder="Status" required>
                 </div>
                 <div class="mb-3">
-                    <input type="password" name="password2" placeholder="Confirm Password">
+                    <input type="password" name="password2" placeholder="Confirm Password" required>
                 </div>
                 <div class="d-grid gap-2">
                     <button type="login" name="register">Register</button>

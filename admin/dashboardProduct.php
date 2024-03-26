@@ -62,9 +62,15 @@ a {
 <body>
 
 <header>
-        <h1 style="color: white;">RAHINDRA COSPLAY</h1>
-        <p>Sewa pakian cosplay nahida</p>
-        <h1 style="color: white;">DAFTAR SEWA</h1>
+<h1 style="color: white;">RAHINDRA COSPLAY</h1>
+<h1 style="color: white;">Dashboard Produk</h1>
+        <ul style="list-style-type: none; padding: 0;">
+    <li style="display: inline; margin-right: 10px;">  <a href="dashboard.php" style="color: white;">Dashboard Pesanan</a></li>
+    <li style="display: inline; margin-right: 10px;">  <a href="dashboardProduct.php" style="color: white;">Dashboard Barang</a></li>
+    <li style="display: inline; margin-right: 10px;">  <a href="tambah_produk.php" style="color: white;">Tambah Produk</a></li>
+    <li style="display: inline; margin-right: 10px;">   <a href="../index.php" style="color: white;">Logout</a></li>
+
+</ul>
     </header>
 
 
@@ -117,17 +123,6 @@ a {
             ?>
         </tbody>
     </table>
-
-    <div class="center-container">
-        <a href="dashboard.php">Dashboard Transaksi</a>
-    </div>
-    <div class="center-container">
-    <a href="tambah_produk.php">Tambah Produk</a>
-    </div>
-    <div class="center-container">
-    <a href="../index.php">Logout</a>
-    </div>
-
 </body>
 
 

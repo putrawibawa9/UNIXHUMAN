@@ -78,6 +78,7 @@
                             <div class="item-detail">
                                 <p>' . $data_item['nama_barang'] . '</p>
                                 <p>Size : ' . $data_item['ukuran_barang'] . '</p>
+                                <p>Rp.' . number_format($data_item['harga_barang'],0,',','.') . '</p>
                                 <div>
                                     <small><i class="fa-regular fa-calendar-days"></i>' . ($data_item['stok_barang'] ? ' Available' : ' Out of Stock') . '</small>';
                     if ($data_item['stok_barang']) echo '<a href="pesan.php?id=' . $data_item['id_barang'] . '" class="button"><i class="fa-solid fa-cart-shopping"></i>PESAN</a>';

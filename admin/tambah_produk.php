@@ -105,6 +105,9 @@ if(isset($_POST['submit'])){
 <h1>Tambah Barang</h1>
 
 <form action="" method="post" enctype="multipart/form-data">
+    <input type="hidden" name="tgl_input" value="<?php echo date('Y-m-d'); ?>">
+    <input type="hidden" name="tgl_update" value="<?php echo date('Y-m-d'); ?>">
+    <input type="hidden" name="status" value="1">
 <ul>
     <li>
         <label for="Nama_produk">Nama Barang :</label>
@@ -115,12 +118,22 @@ if(isset($_POST['submit'])){
         <input type="file" name="gambar_barang" id="Foto_produk" required >
     </li>
     <li>
-        <label for="Nama_produk">jenis Barang :</label>
-        <input type="text" name="jenis_barang" id="Nama_produk" required >
+
+        <label for="cars">Jenis Barang:</label>
+        <select id="cars" name="jenis_barang">
+            <option value="kostum">Kostum</option>
+            <option value="wig">Wig</option>
+            <option value="sepatu">Sepatu</option>
+        </select>
     </li>
     <li>
-        <label for="Nama_produk">Ukuran Barang :</label>
-        <input type="text" name="ukuran_barang" id="Nama_produk" required >
+    <label for="cars">Ukuran Barang:</label>
+        <select id="cars" name="ukuran_barang">
+            <option value="S">S</option>
+            <option value="M">M</option>
+            <option value="L">L</option>
+            <option value="XL">XL</option>
+        </select>
     </li>
     <li>
         <label for="Stok_produk">Stok Barang :</label>
@@ -129,27 +142,7 @@ if(isset($_POST['submit'])){
     <li>
         <label for="Harga_produk">Harga Barang :</label>
         <input type="number" name="harga_barang" id="Harga_produk" required >
-    </li>
-
-
-
-
-
-    <li>
-        <label for="Nama_produk">Status :</label>
-        <input type="text" value="1" name="status" id="Nama_produk" required readonly >
-    </li>
-  
-    <li>
-        <label for="Nama_produk">Tanggal Input :</label>
-        <input type="date" name="tgl_input" id="Nama_produk" required >
-    </li>
-  
-    <li>
-        <label for="Nama_produk">Tanggal Update :</label>
-        <input type="date" name="tgl_update" id="Nama_produk" required >
-    </li>
-  
+    </li>  
     <button type="submit" name="submit">Post</button>
 </ul>
 

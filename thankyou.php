@@ -1,111 +1,118 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Thank you</title>
-    <link rel="icon type=image/x-icon" href="logo2.png">
-    <link rel="stylesheet" href="css/style.css">
-</head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Invoice</title>
 <style>
-        body {
-            text-align: center; /* Center the text content */
-        }
-
-        h1 {
-            margin-top: 50px; /* Add some top margin for spacing */
-        }
-
-        a {
-            display: block;
-            margin-top: 20px; /* Add some top margin for spacing */
-        }
-        footer {
-            background-color: #40513B;
-            color: #ffffff;
-            text-align: center;
-         }
-
-         .upload-container {
-        max-width: 400px;
-        margin: 50px auto;
+    body {
+        font-family: Arial, sans-serif;
+        margin: 0;
         padding: 20px;
-        background-color: #f9f9f9;
-        border: 1px solid #ccc;
+        background-color: #f4f4f4;
+    }
+
+    .invoice {
+        background-color: #fff;
+        max-width: 800px;
+        margin: 0 auto;
+        padding: 20px;
         border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
     }
-    
-    .upload-container label {
-        display: block;
-        font-size: 16px;
-        margin-bottom: 10px;
+
+    .invoice-header {
+        text-align: center;
+        margin-bottom: 20px;
     }
-    
-    .upload-container input[type="file"] {
-        margin-bottom: 10px;
+
+    .invoice-header h1 {
+        margin: 0;
+        color: #333;
     }
-    
-    .upload-container a.button {
-        display: inline-block;
-        padding: 10px 20px;
-        background-color: #007bff;
-        color: #fff;
-        text-decoration: none;
-        border-radius: 5px;
+
+    .invoice-details {
+        margin-bottom: 20px;
     }
-    
-    .upload-container a.button:hover {
-        background-color: #0056b3;
+
+    .invoice-details p {
+        margin: 0;
     }
-         
-    </style>
+
+    .invoice-items {
+        width: 100%;
+        border-collapse: collapse;
+        margin-bottom: 20px;
+    }
+
+    .invoice-items th,
+    .invoice-items td {
+        padding: 10px;
+        border-bottom: 1px solid #ddd;
+        text-align: left;
+    }
+
+    .invoice-items th {
+        background-color: #f4f4f4;
+    }
+
+    .invoice-total {
+        text-align: right;
+    }
+
+    .invoice-total p {
+        margin: 0;
+        font-weight: bold;
+    }
+
+    .footer {
+        text-align: center;
+        color: #777;
+    }
+</style>
 </head>
 <body>
-    <nav>
-        <div class="wrapper">
-            <div class="logo"><img src="logooo.png" /></div>
-            <div class="Menu">
-                <ul>
-                    <li><a href="#home" class="menuItem">Home</a></li>
-                    <li><a href="#pilihan-item" class="menuItem">Pilihan Item</a></li>
-                    <li><a href="#tentang-saya" class="menuItem">Tentang Saya</a></li>
-                    <?php if (isset($_SESSION['email_pelanggan'])) { ?>
-                        <li>
-                            <a>Hallo,
-                                <?= $_SESSION['nama_pelanggan'] ?>
-                            </a>
-                        </li>
-                        <li>
-                            <a href="login.php?logout=1">Logout</a>
-                        </li>
-                    <?php } else { ?>
-                        <li>
-                            <a href="login.php">Login</a>
-                        </li>
-                    <?php } ?>
-                </ul>
-            </div>
-            <button class="hamburger-menu">
-                <i class="fa-solid fa-bars icon-bars"></i>
-                <i class="fa-solid fa-xmark icon-close"></i>
-            </button>
-        </div>
+<div class="invoice">
+    <div class="invoice-header">
+        <h1>Nota</h1>
+    </div>
+    <div class="invoice-details">
+        <p><strong>Id Transaksi:</strong> 18</p>
+        <p><strong>Tanggal:</strong> 27 Maret 2024</p>
+        <p><strong>Customer:</strong> Dayura</p>
+    </div>
+    <table class="invoice-items">
+        <thead>
+            <tr>
+                <th>Nama Barang</th>
+                <th>Ukuran</th>
+                <th>Jumlah</th>
+                <th>Hari</th>
+                <th>Unit Price</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td>Kostum Nahida</td>
+                <td>L</td>
+                <td>1</td>
+                <td>1 Hari</td>
+                <td>Rp.20.000</td>
+            </tr>
 
-    </nav>
-    <h1>TERIMA KASIH SUDAH MENYEWA</h1>
-    <a href="index.php">Kembali ke home</a> <br>
-
-  <div class="upload-container">
-    <label for="fileUpload">Silahkan upload bukti pembayaran disini</label>
-    <input type="file" id="fileUpload" name="fileUpload">
-    <br>
-    <a href="index.php" class="button">Upload</a>
+        </tbody>
+    </table>
+    <div class="invoice-total">
+        <p><strong>Total:</strong> Rp.20.000</p>
+    </div>
 </div>
-
-    <footer>
-        <div class="wrapper">arigatou gozaimasu !!</div>
-    </footer>
+<div class="footer">
+    <p>Thank you for your business!</p>
+    <label for="">Input Bukti Transaksi!</label>
+    <br>
+    <input type="file">
+    <br>
+    <a href="index.php">Kembali</a>
+</div>
 </body>
-
 </html>

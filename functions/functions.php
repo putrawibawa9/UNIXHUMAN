@@ -22,13 +22,13 @@ function regristrasiPelanggan($data){
     $nama_pelanggan = strtolower(stripslashes($data['nama_pelanggan'])); 
     $no_telepon = $data['no_telepon']; 
     $email_pelanggan = $data['email_pelanggan']; 
-    $password = $data['password']; 
+    $password = md5($data['password']); 
     $alamat_pelanggan = $data['alamat_pelanggan']; 
     $status = $data['status']; 
-    $password2 = $data['password2']; 
+    $password2 = md5($data['password2']); 
   
     //cek username udah ada atau belum
-    $result =mysqli_query($conn,"SELECT nama_pelanggan FROM pelanggan WHERE nama_pelanggan = '$nama_pelanggan';");
+    $result =mysqli_query($conn,"SELECT email_pelanggan FROM pelanggan WHERE email_pelanggan = '$email_pelanggan';");
     if(mysqli_fetch_assoc($result)){
     echo "<script>
     alert('user sudah ada');
