@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahindra Cosplay</title>
+    <title>INDIRART COSPLAY</title>
     <link rel="icon type=image/x-icon" href="logo2.png">
     <link rel="stylesheet" href="css/style.css">
     <script src="https://unpkg.com/@phosphor-icons/web"></script>
@@ -56,7 +56,7 @@
         <section id="home">
             <div class="header-opacity"></div>
             <div class="header-jumbotron">
-                <h4>Rahindra Cosplay</h4>
+                <h4>INDIRART COSPLAY</h4>
                 <h5>Sewa Pakaian Cosplay<br /> RAHINDRA </h5>
                 <p>wig, aksesoris, pakaian</p>
                 <a href="#pilihan-item" class="button button-xl">PESAN SEKARANG</a>
@@ -79,6 +79,7 @@
                                 <p>' . $data_item['nama_barang'] . '</p>
                                 <p>Size : ' . $data_item['ukuran_barang'] . '</p>
                                 <p>Rp.' . number_format($data_item['harga_barang'],0,',','.') . '</p>
+                                <p>Warna : ' . $data_item['warna_barang'] . '</p>
                                 <div>
                                     <small><i class="fa-regular fa-calendar-days"></i>' . ($data_item['stok_barang'] ? ' Available' : ' Out of Stock') . '</small>';
                     if ($data_item['stok_barang']) echo '<a href="pesan.php?id=' . $data_item['id_barang'] . '" class="button"><i class="fa-solid fa-cart-shopping"></i>PESAN</a>';

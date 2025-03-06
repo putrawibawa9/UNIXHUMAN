@@ -128,7 +128,7 @@ if(isset($_POST['submit'])){
     </li>
     <li>
         <label for="Foto_produk">Foto Produk :</label>
-        <input type="file" name="gambar_barang" id="nama" required>
+        <input type="file" name="gambar_barang" id="nama" >
 
         <img src="../<?= $pdk['gambar_barang'] ?>" width="100px" height="100px">
     </li>
@@ -141,6 +141,10 @@ if(isset($_POST['submit'])){
     <li>
         <label for="Nama_produk">Ukuran Produk :</label>
         <input type="text" name="ukuran_barang" id="Nama_produk" required value="<?= $pdk['ukuran_barang']; ?>">
+    </li>
+    <li>
+        <label for="Nama_produk">Warna Produk :</label>
+        <input type="text" name="warna_barang" id="Nama_produk" required value="<?= $pdk['warna_barang']; ?>">
     </li>
     <li>
         <label for="Nama_produk">Stok Produk :</label>

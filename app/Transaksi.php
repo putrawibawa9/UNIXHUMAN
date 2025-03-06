@@ -34,6 +34,7 @@ class Transaksi extends DB\Database
 
     function setData()
     {
+    
         $id_user        = $_SESSION['id_user'];
         $id_barang      = $_POST['id_barang'];
         $jumlah         = $_POST['jumlah'];

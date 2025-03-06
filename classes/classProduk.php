@@ -68,23 +68,27 @@ class Produk extends Connect{
 }
 
     public function addProduk($data){
+      
         $conn = $this->getConnection();
         $nama_barang = $data['nama_barang'];
         $jenis_barang = $data['jenis_barang'];
+        $warna_barang = $data['warna_barang'];
         $ukuran_barang = $data['ukuran_barang'];
         $stok_barang = $data['stok_barang'];
         $harga_barang = $data['harga_barang'];
         $status = $data['status'];
-        $tgl_input = $data['tgl_input'];
-        $tgl_update = $data['tgl_update'];
+        // $tgl_input = $data['tgl_input'];
+        // $tgl_update = $data['tgl_update'];
         $gambar_barang = $this->uploadGambar();
         if (!$gambar_barang) {
             return false;
         }
 
 
-        $query = "INSERT INTO barang VALUES 
-        ('',?,?,?,?,?,?,?,?,?)";
+       $query = "INSERT INTO barang 
+          (nama_barang, gambar_barang, jenis_barang, ukuran_barang, stok_barang, harga_barang, status, warna_barang) 
+          VALUES (?, ?, ?, ?, ?, ?, ?,?)";
+
     
         $stmt = $conn->prepare($query);
     
@@ -95,21 +99,24 @@ class Produk extends Connect{
         $stmt->bindParam(5,$stok_barang );
         $stmt->bindParam(6,$harga_barang );
         $stmt->bindParam(7,$status );
-        $stmt->bindParam(8,$tgl_input );
-        $stmt->bindParam(9,$tgl_update );
+        $stmt->bindParam(8,$warna_barang );
+        // $stmt->bindParam(8,$tgl_input );
+        // $stmt->bindParam(9,$tgl_update );
         $stmt->execute();
         return true;
     }
 
 
     public function editProduk($data){
+        
         $conn = $this->getConnection();
         $id_barang = $data['id_barang'];
         $nama_barang = $data['nama_barang'];
         $jenis_barang = $data['jenis_barang'];
         $ukuran_barang = $data['ukuran_barang'];
-        $gambar_barang = $data['gambar_barang'];
+        // $gambar_barang = $data['gambar_barang'];
         $gambar_lama = $data['gambar_lama'];
+        $warna_barang = $data['warna_barang'];
         $ukuran_barang = $data['ukuran_barang'];
         $stok_barang = $data['stok_barang'];
         $harga_barang = $data['harga_barang'];
@@ -133,7 +140,8 @@ class Produk extends Connect{
         harga_barang = ?,
         status = ?,
         tgl_input = ?,
-        tgl_update = ?
+        tgl_update = ?,
+        warna_barang = ?
         WHERE id_barang = ?
         ";
              $stmt = $conn->prepare($query);
@@ -146,7 +154,8 @@ class Produk extends Connect{
                 $stmt->bindParam(7,$status);
                 $stmt->bindParam(8,$tgl_input);
                 $stmt->bindParam(9,$tgl_update);
-                $stmt->bindParam(10,$id_barang);
+                $stmt->bindParam(10,$warna_barang);
+                $stmt->bindParam(11,$id_barang);
                 $stmt->execute();
                 return true;
     }

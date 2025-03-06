@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahindra Cosplay | Pesan</title>
+    <title>INDIRART COSPLAY | Pesan</title>
     <link rel="icon type=image/x-icon" href="logo2.png">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="css/pesan.css">
@@ -115,7 +115,7 @@
             </div>
             <div class="pesan-field">
                 <label for="total_harga">Total bayar (Rp)</label>
-                <input type="number" name="total_harga" id="total_harga" readonly>
+                <input type="number" name="total_harga" id="total_harga" value="" readonly>
             </div>
             <div class="pesan-action">
                 <a href="index.php">Batal</a>

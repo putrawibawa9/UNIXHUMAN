@@ -4,7 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Rahindra Cosplay | Dashboard</title>
+    <title>INDIRART COSPLAY | Dashboard</title>
     <link rel="icon type=image/x-icon" href="logo2.png">
     <link rel="stylesheet" href="../css/dashboardAdmin.css">
     <style>
@@ -62,7 +62,7 @@ a {
 <body>
 
 <header>
-<h1 style="color: white;">RAHINDRA COSPLAY</h1>
+<h1 style="color: white;">INDIRART COSPLAY</h1>
 <h1 style="color: white;">Dashboard Pesanan</h1>
         <ul style="list-style-type: none; padding: 0;">
     <li style="display: inline; margin-right: 10px;">  <a href="dashboard.php" style="color: white;">Dashboard Pesanan</a></li>

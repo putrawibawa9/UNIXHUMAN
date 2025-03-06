@@ -117,15 +117,7 @@ if(isset($_POST['submit'])){
         <label for="Foto_produk">Gambar :</label>
         <input type="file" name="gambar_barang" id="Foto_produk" required >
     </li>
-    <li>
-
-        <label for="cars">Jenis Barang:</label>
-        <select id="cars" name="jenis_barang">
-            <option value="kostum">Kostum</option>
-            <option value="wig">Wig</option>
-            <option value="sepatu">Sepatu</option>
-        </select>
-    </li>
+    
     <li>
     <label for="cars">Ukuran Barang:</label>
         <select id="cars" name="ukuran_barang">
@@ -142,6 +134,14 @@ if(isset($_POST['submit'])){
     <li>
         <label for="Harga_produk">Harga Barang :</label>
         <input type="number" name="harga_barang" id="Harga_produk" required >
+    </li>  
+    <li>
+        <label for="Harga_produk">Warna Barang :</label>
+        <input type="text" name="warna_barang" id="Harga_produk" required >
+    </li>  
+    <li>
+        <label for="Harga_produk">Jenis Barang :</label>
+        <input type="text" name="jenis_barang" id="Harga_produk" required >
     </li>  
     <button type="submit" name="submit">Post</button>
 </ul>

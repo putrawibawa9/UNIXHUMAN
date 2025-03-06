@@ -11,7 +11,7 @@ public function register($username, $password){
     $connection = $this->getConnection();
 
     $query = "INSERT INTO user
-    VALUES ('',?,?);";
+    VALUES (null,?,?);";
     $result = $connection->prepare($query);
     $result->execute([$username, $password]);
     return $result;

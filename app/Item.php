@@ -11,7 +11,7 @@ class Item extends Database
 
     function getAll()
     {
-        $sql = "SELECT * FROM barang WHERE status = 1";
+        $sql = "SELECT * FROM barang";
         $query = mysqli_query($this->db, $sql);
         while ($data = mysqli_fetch_array($query)) {
             $item[] = $data;
